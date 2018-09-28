@@ -12,6 +12,7 @@ jobs:
         gcloud auth activate-service-account --key-file=${HOME}/gcloud-service-key.json
         gcloud --quiet config set project ${GOOGLE_PROJECT_ID}
         gcloud --quiet config set compute/zone ${GOOGLE_COMPUTE_ZONE}
+        ll
       #  gcloud compute instances create ${GOOGLE_VM_NAME} --image-family ${GOOGLE_VM_FAMILY} --image-project ${GOOGLE_VM_IMAGE} --labels ${GOOGLE_VM_LABELS}
       #  gcloud compute instances list
 workflows:
