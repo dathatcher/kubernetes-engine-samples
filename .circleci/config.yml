@@ -19,6 +19,7 @@ jobs:
         docker build -t gcr.io/${PROJECT_ID}/hello-app:v1 .
         docker images
         gcloud auth configure-docker
+        docker push gcr.io/${PROJECT_ID}/hello-app:v1
       #  gcloud compute instances create ${GOOGLE_VM_NAME} --image-family ${GOOGLE_VM_FAMILY} --image-project ${GOOGLE_VM_IMAGE} --labels ${GOOGLE_VM_LABELS}
       #  gcloud compute instances list
 workflows:
