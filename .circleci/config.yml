@@ -4,6 +4,7 @@ jobs:
     docker:
     - image: google/cloud-sdk
     steps:
+    - setup_remote_docker
     - checkout
     - run:
         name: Store Service Account
