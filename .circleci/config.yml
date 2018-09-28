@@ -5,8 +5,8 @@ jobs:
     - image: google/cloud-sdk
     steps:
     - checkout
-    - run:
-        name: Store Service Account
+     #- run:
+     #   name: Store Service Account
      #   command: echo $GCLOUD_SERVICE_KEY > ${HOME}/gcloud-service-key.json
     - run: |
         gcloud auth activate-service-account --key-file=${HOME}/gcloud-service-key.json
