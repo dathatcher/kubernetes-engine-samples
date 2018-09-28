@@ -21,7 +21,7 @@ jobs:
         gcloud auth configure-docker
         docker push gcr.io/${PROJECT_ID}/hello-app:${DOCKER_IMAGE_VERSION}
         #gcloud container clusters create hello-cluster --num-nodes=2
-        gcloud container clusters create ${GOOGLE_KUBER_NAME}  -num-nodes=2 --labels ${GOOGLE_KUBER_LABLES}
+        gcloud container clusters create ${GOOGLE_KUBER_NAME}  --num-nodes=2 --labels ${GOOGLE_KUBER_LABLES}
         kubectl run hello-web --image=gcr.io/${PROJECT_ID}/hello-app:${DOCKER_IMAGE_VERSION} --port 8080
         kubectl get pods
         kubectl expose deployment hello-web --type=LoadBalancer --port 80 --target-port 8080
